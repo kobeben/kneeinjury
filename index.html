@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>膝关节韧带损伤：临床实践核心指南</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            --card-bg: rgba(255, 255, 255, 0.6);
+            --text-dark: #2d3748;
+            --text-light: #4a5568;
+            --border-color: rgba(200, 200, 220, 0.4);
+            
+            --title-gradient: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            --h2-color: #0d56d9;
+            --h3-color: #5a0fb2;
+            --number-color: #d946ef; /* Bright fuchsia */
+        }
+
+        body {
+            font-family: 'Poppins', 'Helvetica Neue', 'Arial', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--bg-gradient);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: transparent;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            background: var(--title-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-top: 10px;
+        }
+        
+        /* 作者信息样式调整 */
+        .author-info {
+            display: flex;
+            align-items: center; /* 垂直居中对齐 */
+            justify-content: center; /* 水平居中 */
+            gap: 15px; /* 头像和文字之间的间距 */
+            margin-top: 25px; /* 与上方内容的间距 */
+        }
+        
+        .author-avatar {
+            width: 50px; /* 调整头像尺寸 */
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .author-details {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--h2-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(13, 86, 217, 0.2);
+            text-align: left;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--h3-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .card p, .card li {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--number-color);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .diagnosis-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        
+        .highlight-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .highlight-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--number-color);
+        }
+
+        ul {
+            list-style-type: '✓  ';
+            padding-left: 25px;
+        }
+
+        li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(45, 55, 72, 0.7);
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(45, 55, 72, 0.2);
+        }
+
+        sup {
+            font-size: 0.7em;
+            vertical-align: super;
+            color: var(--h2-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>膝关节韧带损伤：临床实践核心指南</h1>
+            <p class="subtitle">基于美国物理治疗协会(APTA)骨科分会指南 (JOSPT 2010;40(4):A1-A37)</p>
+            
+            <!-- 作者信息区 -->
+            <div class="author-info">
+                <!-- 已更新头像地址 -->
+                <img src="https://kobeben-1364006343.cos.ap-nanjing.myqcloud.com/me.jpg" alt="作者头像" class="author-avatar">
+                <div class="author-details">
+                    黄犇 苏州永鼎医院
+                </div>
+            </div>
+        </header>
+
+        <!-- 所有内容 section 保持不变 -->
+        <section class="overview">
+            <h2>数据概览：损伤普遍性</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <p class="stat-number">~70%</p>
+                    <p class="stat-label">的ACL损伤为<br><strong>非接触性损伤</strong></p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">2.4-9.7x</p>
+                    <p class="stat-label">女性运动员ACL损伤风险<br>高于男性 <sup>[14, 109]</sup></p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">80%</p>
+                    <p class="stat-label">ACL缺失患者10年内<br>半月板撕裂发生率 <sup>[14]</sup></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="risk-factors">
+            <h2>风险识别：预防的关键</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>👟 环境与解剖因素</h3>
+                    <p>包括鞋与地面摩擦力<sup>[50, 51]</sup>、体重指数(BMI)增大、股骨髁间窝狭窄<sup>[51, 167]</sup>和全身关节松弛度。</p>
+                </div>
+                <div class="card">
+                    <h3>🏃‍♀️ 激素与神经肌肉因素</h3>
+                    <p>包括女性排卵前期、膝关节“动态外翻”<sup>[51, 148]</sup>、股四头肌离心收缩时过度激活以及核心稳定性不足。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="diagnosis">
+            <h2>诊断与评估：精准分类</h2>
+             <div class="diagnosis-section">
+                <div class="card diagnosis-card">
+                    <h3>谁能保守治疗？ (Coper 筛查标准 <sup>[39, 63]</sup>)</h3>
+                    <ul>
+                        <li>膝关节无积液，且拥有完全活动度 (ROM)</li>
+                        <li>患肢股四头肌等长收缩力量 > 对侧的70%</li>
+                        <li>4次单足跳测试中，无痛感且不产生不稳</li>
+                        <li>全局功能评分 (GRS) ≥ 60%，且无不稳主诉</li>
+                    </ul>
+                </div>
+                <div class="card highlight-card">
+                    <h3>功能测试核心指标</h3>
+                    <p class="highlight-number">LSI > 85%</p>
+                    <p>在单足跳等测试中，患侧表现应达到健侧的85%以上，即肢体对称指数(Limb Symmetry Index)大于85%，是功能恢复的关键指标<sup>[115]</sup>。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interventions">
+            <h2>核心干预策略</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>早期活动：立即 vs. 延迟</h3>
+                    <p><strong>推荐：立即开始 (B级证据)</strong>。术后立即活动有助于增加关节活动度、减轻疼痛并防止软组织不良愈合<sup>[13, 15]</sup>。</p>
+                </div>
+                <div class="card">
+                    <h3>支具使用：一个复杂的问题</h3>
+                    <p>• <strong>ACL损伤(非手术)</strong>: 功能性支具有益 (C级证据) <sup>[82]</sup></p>
+                    <p>• <strong>ACL重建术后</strong>: 早期使用存在争议，并不总优于不使用 (B/D级证据) <sup>[17, 105, 153]</sup></p>
+                </div>
+                <div class="card">
+                    <h3>力量训练：康复的基石</h3>
+                    <p>• <strong>开链+闭链训练</strong> 结合 (A级证据)</p>
+                    <p>• <strong>神经肌肉电刺激(NMES)</strong> 可用于增强术后股四头肌力量 (B级证据) <sup>[175]</sup></p>
+                    <p>• <strong>离心训练</strong> 可有效改善肌力和功能 (B级证据)</p>
+                </div>
+                <div class="card">
+                    <h3>“加速”康复</h3>
+                    <p><strong>安全，但需谨慎 (C级证据)</strong>。强调早期恢复伸膝和早期负重是安全的，但尚无证据表明这能确保更早或更安全地重返赛场<sup>[164]</sup>。</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <!-- 作者信息已移至页眉 -->
+            <p><strong>数据来源</strong>: J Orthop Sports Phys Ther 2010;40(4):A1-A37. doi:10.2519/jospt.2010.0303</p>
+            <p><strong>免责声明</strong>: 本图表为指南核心内容摘要，非完整临床标准，旨在提供教育信息。所有诊断和治疗决策应由具备资质的专业医疗人士作出。</p>
+        </footer>
+    </main>
+
+</body>
+</html>
