@@ -40,6 +40,9 @@
         header {
             text-align: center;
             margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
@@ -58,6 +61,30 @@
             font-size: 1.1rem;
             color: var(--text-light);
             margin-top: 10px;
+        }
+        
+        /* 作者信息样式调整 */
+        .author-info {
+            display: flex;
+            align-items: center; /* 垂直居中对齐 */
+            justify-content: center; /* 水平居中 */
+            gap: 15px; /* 头像和文字之间的间距 */
+            margin-top: 25px; /* 与上方内容的间距 */
+        }
+        
+        .author-avatar {
+            width: 50px; /* 调整头像尺寸 */
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .author-details {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--text-dark);
         }
 
         section {
@@ -178,7 +205,7 @@
             vertical-align: super;
             color: var(--h2-color);
         }
-
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
@@ -193,8 +220,18 @@
         <header>
             <h1>膝关节韧带损伤：临床实践核心指南</h1>
             <p class="subtitle">基于美国物理治疗协会(APTA)骨科分会指南 (JOSPT 2010;40(4):A1-A37)</p>
+            
+            <!-- 作者信息区 -->
+            <div class="author-info">
+                <!-- 已更新头像地址 -->
+                <img src="https://kobeben-1364006343.cos.ap-nanjing.myqcloud.com/me.jpg" alt="作者头像" class="author-avatar">
+                <div class="author-details">
+                    黄犇 苏州永鼎医院
+                </div>
+            </div>
         </header>
 
+        <!-- 所有内容 section 保持不变 -->
         <section class="overview">
             <h2>数据概览：损伤普遍性</h2>
             <div class="stats-grid">
@@ -273,6 +310,7 @@
         </section>
 
         <footer>
+            <!-- 作者信息已移至页眉 -->
             <p><strong>数据来源</strong>: J Orthop Sports Phys Ther 2010;40(4):A1-A37. doi:10.2519/jospt.2010.0303</p>
             <p><strong>免责声明</strong>: 本图表为指南核心内容摘要，非完整临床标准，旨在提供教育信息。所有诊断和治疗决策应由具备资质的专业医疗人士作出。</p>
         </footer>
